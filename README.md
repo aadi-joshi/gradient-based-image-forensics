@@ -45,10 +45,8 @@ print("Device:", DEVICE)
     
 
 ## image loader
-here the image becomes a 3D array
-$$
-\text{img} \in \mathbb{R}^{H \times W \times 3}
-$$
+here the image becomes a 3D array<br>
+&emsp; $\text{img} \in \mathbb{R}^{H \times W \times 3}$
 <br>
 Where:<br>
 H,W=height,width<br>
@@ -69,16 +67,10 @@ def load_image(path, size=256):
 ```
 
 ## rgb -> luminance
-mathematically rgb is a vector and luminance is a projection onto a single axis
-$$
-L(x,y) = \mathbf{w}^\top \mathbf{I}(x,y)
-$$
-
-where:
-
-$$
-\mathbf{w} = [0.2126,\ 0.7152,\ 0.0722]
-$$
+mathematically rgb is a vector and luminance is a projection onto a single axis<br>
+&emsp; $L(x,y) = \mathbf{w}^\top \mathbf{I}(x,y)$
+<br>where:<br>
+&emsp; $\mathbf{w} = [0.2126,\ 0.7152,\ 0.0722]$ <br>
 this removes color tricks and isolates **physical brightness**.
 
 
@@ -119,11 +111,9 @@ def compute_gradients(L):
 each pixel now has a horizontal gradient and a vertical gradient
 
 ## gradient vector field (v(x,y))
-here, every pixel becomes a 2d vector. so the image is now a vector field;
-$$
-V = \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_N \}
-$$
-where N=H*W
+here, every pixel becomes a 2d vector. so the image is now a vector field;<br>
+&emsp; $V = \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_N \}$
+<br>where N=H*W<br>
 This is important as *we are no longer analyzing images, but fields of directional change.*
 
 
@@ -324,4 +314,4 @@ classify_image(example_path)
 ## [dataset](https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images)
 
 ## motivation:
-![Diagram](https://i.ibb.co/tTzvg4bz/Whats-App-Image-2025-12-25-at-11-48-08-PM.jpg")
+![Diagram](./README_files/screenshot.png)
